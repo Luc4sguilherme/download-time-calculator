@@ -13,10 +13,10 @@ defmodule DownloadTimeCalculator do
     IO.puts("Calculate download time")
 
     {file_size_value, file_size_unit} =
-      IO.gets("Type the file size (10 GB): ") |> parse_input() |> valid_input("size")
+      IO.gets("Enter the file size (10 GB): ") |> parse_input() |> valid_input("size")
 
     {download_speed_value, download_speed_unit} =
-      IO.gets("Type the download speed (100 Mb/s): ") |> parse_input() |> valid_input("speed")
+      IO.gets("Enter the download speed (100 Mb/s): ") |> parse_input() |> valid_input("speed")
 
     time =
       calculate(
