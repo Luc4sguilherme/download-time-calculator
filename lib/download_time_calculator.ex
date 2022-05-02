@@ -30,8 +30,8 @@ defmodule DownloadTimeCalculator do
   defp valid_input({_number, unit} = input, type) do
     regex =
       case type do
-        "size" -> ~r/(k|M|G|T)(B)(\/s)?/
-        "speed" -> ~r/(k|M|G|T)(b)(\/s)?/
+        "size" -> ~r/(k|M|G|T)(B)/
+        "speed" -> ~r/(k|M|G|T)(b)(\/s)/
       end
 
     cond do
