@@ -24,7 +24,7 @@ defmodule DownloadTimeCalculator do
         %{value: download_speed_value, unit: download_speed_unit}
       )
 
-    IO.puts("Download time is: #{time}")
+    IO.puts("Download time is: #{time} (hh/mm/ss)")
   end
 
   defp valid_input({_number, unit} = input, type) do
@@ -59,7 +59,7 @@ defmodule DownloadTimeCalculator do
     |> parse_input()
   end
 
-  defp calculate(file_size, download_speed) do
+  def calculate(file_size, download_speed) do
     %{value: file_size_value, unit: file_size_unit} = file_size
     %{value: download_speed_value, unit: download_speed_unit} = download_speed
 
